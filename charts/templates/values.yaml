@@ -1,20 +1,20 @@
 groupName: lego.dns-solver
 
-nameOverride: ''
+nameOverride: ""
 
 webhook:
   image:
-    repository: ghcr.io/yxwuxuanl/cert-manager-lego-webhook
-    tag: ''
+    repository: ghcr.io/dayflower/cert-manager-lego-webhook
+    tag: ""
   imagePullPolicy: IfNotPresent
   replicas: 1
-  affinity: [ ]
-  resources: { }
+  affinity: []
+  resources: {}
   envs:
-    LEGO_DISABLE_CNAME_SUPPORT: 'true'
-  nodeSelector: { }
-  extraArgs: [ ]
+    LEGO_DISABLE_CNAME_SUPPORT: "true"
+  nodeSelector: {}
+  extraArgs: []
 
 certManager:
-  namespace: ''
+  namespace: ""
   serviceAccountName: cert-manager

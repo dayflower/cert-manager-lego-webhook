@@ -3,7 +3,7 @@ name: helm chart release
 on:
   push:
     branches:
-      - main
+      - forked
 
 jobs:
   build-and-push:
