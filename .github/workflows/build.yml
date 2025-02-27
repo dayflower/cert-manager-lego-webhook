@@ -1,11 +1,12 @@
 name: build push docker image
 
 on:
-  push:
-    branches:
-      - forked
-    tags:
-      - "v*"
+  workflow_dispatch:
+  #push:
+  #  branches:
+  #    - forked
+  #  tags:
+  #    - "v*"
 
 jobs:
   publish:
