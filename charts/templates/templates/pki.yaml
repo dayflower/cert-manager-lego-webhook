@@ -14,7 +14,7 @@ spec:
   issuerRef:
     name: {{ include "appname" . }}-selfsign
   secretName: {{ include "appname" . }}-ca
-  duration: '{{ mul 10 365 24 }}h'
+  duration: '{{ mul 10 365 24 }}h0m0s'
   commonName: 'ca.{{ include "appname" . }}.{{ .Release.Namespace }}'
   isCA: true
 
@@ -36,7 +36,7 @@ spec:
   issuerRef:
     name: {{ include "appname" . }}-ca
   secretName: {{ include "appname" . }}
-  duration: '{{ mul 365 24 }}h'
+  duration: '{{ mul 365 24 }}h0m0s'
   dnsNames:
     - {{ include "appname" . }}
     - {{ include "appname" . }}.{{ .Release.Namespace }}
